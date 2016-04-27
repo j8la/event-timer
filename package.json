@@ -1,0 +1,24 @@
+{
+  "name": "event-timer",
+  "version": "1.0.0",
+  "description": "A very simple timer which emit an event at every time interval.",
+  "main": "event-timer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j8la/event-timer.git"
+  },
+  "keywords": [
+    "timer",
+    "event",
+    "interval"
+  ],
+  "author": "Julien Blanc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j8la/event-timer/issues"
+  },
+  "homepage": "https://github.com/j8la/event-timer#readme"
+}
