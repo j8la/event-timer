@@ -41,6 +41,11 @@ check.reinit(2000);
 ```
 
 
+# Updates
+- `v1.1.0 :` Goodbye setInterval, welcome to setTimeout...
+- `v1.0.0 :` Initial release
+
+
 ## Licence
 The MIT License (MIT) 
 Copyright (c) 2016 Julien Blanc

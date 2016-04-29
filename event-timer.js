@@ -1,8 +1,8 @@
 /*
 Name    : event-timer.js
 Author  : Julien Blanc
-Version : 1.0.0
-Date    : 27/04/2016
+Version : 1.1.0
+Date    : 29/04/2016
 NodeJS  : 5.10.1+ 
 */
 
@@ -24,21 +24,25 @@ util.inherits(evt, event);
 //------ Start timer
 evt.prototype.start = function() {
     
-    var self = this;
-    
     if(this.events.constructor === Array && this.interval === parseInt(this.interval,10)) {
-    
-        this.handle = setInterval(function() {
+        
+        var self = this;
+        
+        var timer = function() {
             
             for(var evt in self.events) {
                 self.emit(self.events[evt]);
             }
             
-        }, this.interval);
+            self.handle = setTimeout(timer, self.interval);
+            
+        }
+        
+        timer();
         
     } else {
         
-        self.emit('error','\'events\' is not an array and/or \'interval\' is not an integer');
+        this.emit('error','\'events\' is not an array and/or \'interval\' is not an integer');
 
     }
     
@@ -47,7 +51,7 @@ evt.prototype.start = function() {
 //------ Stop timer
 evt.prototype.stop = function() {
     
-    clearInterval(this.handle);
+    clearTimeout(this.handle);
     this.handle = null;
     
 }
