@@ -1,8 +1,8 @@
 /*
 Name    : event-timer.js
 Author  : Julien Blanc
-Version : 1.1.1
-Date    : 29/04/2016
+Version : 1.1.2
+Date    : 02/05/2016
 NodeJS  : 5.10.1+ 
 */
 
